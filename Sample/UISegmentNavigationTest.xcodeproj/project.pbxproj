@@ -21,9 +21,9 @@
 		5987920918B71E9600C03676 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 598791EB18B71E9600C03676 /* UIKit.framework */; };
 		5987921118B71E9600C03676 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5987920F18B71E9600C03676 /* InfoPlist.strings */; };
 		5987921318B71E9600C03676 /* UISegmentNavigationTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5987921218B71E9600C03676 /* UISegmentNavigationTestTests.m */; };
-		5987921E18B71ED600C03676 /* GuGuSegmentNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5987921D18B71ED600C03676 /* GuGuSegmentNaviViewController.m */; };
-		5987922118B721DF00C03676 /* GuGuSegmentBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5987922018B721DF00C03676 /* GuGuSegmentBarView.m */; };
-		5987922A18B749F100C03676 /* GuGuLandscapeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5987922918B749F100C03676 /* GuGuLandscapeTableView.m */; };
+		DABEA69C198A1C6700B82A3C /* ZPLandscapeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DABEA697198A1C6700B82A3C /* ZPLandscapeTableView.m */; };
+		DABEA69D198A1C6700B82A3C /* ZPSegmentNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DABEA699198A1C6700B82A3C /* ZPSegmentNaviViewController.m */; };
+		DABEA69E198A1C6700B82A3C /* ZPSegmentBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DABEA69B198A1C6700B82A3C /* ZPSegmentBarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,12 +56,12 @@
 		5987920E18B71E9600C03676 /* UISegmentNavigationTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UISegmentNavigationTestTests-Info.plist"; sourceTree = "<group>"; };
 		5987921018B71E9600C03676 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5987921218B71E9600C03676 /* UISegmentNavigationTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UISegmentNavigationTestTests.m; sourceTree = "<group>"; };
-		5987921C18B71ED600C03676 /* GuGuSegmentNaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuGuSegmentNaviViewController.h; sourceTree = "<group>"; };
-		5987921D18B71ED600C03676 /* GuGuSegmentNaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuGuSegmentNaviViewController.m; sourceTree = "<group>"; };
-		5987921F18B721DF00C03676 /* GuGuSegmentBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuGuSegmentBarView.h; sourceTree = "<group>"; };
-		5987922018B721DF00C03676 /* GuGuSegmentBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuGuSegmentBarView.m; sourceTree = "<group>"; };
-		5987922818B749F100C03676 /* GuGuLandscapeTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuGuLandscapeTableView.h; sourceTree = "<group>"; };
-		5987922918B749F100C03676 /* GuGuLandscapeTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuGuLandscapeTableView.m; sourceTree = "<group>"; };
+		DABEA696198A1C6700B82A3C /* ZPLandscapeTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPLandscapeTableView.h; sourceTree = "<group>"; };
+		DABEA697198A1C6700B82A3C /* ZPLandscapeTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPLandscapeTableView.m; sourceTree = "<group>"; };
+		DABEA698198A1C6700B82A3C /* ZPSegmentNaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPSegmentNaviViewController.h; sourceTree = "<group>"; };
+		DABEA699198A1C6700B82A3C /* ZPSegmentNaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPSegmentNaviViewController.m; sourceTree = "<group>"; };
+		DABEA69A198A1C6700B82A3C /* ZPSegmentBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPSegmentBarView.h; sourceTree = "<group>"; };
+		DABEA69B198A1C6700B82A3C /* ZPSegmentBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPSegmentBarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,10 +121,7 @@
 		598791ED18B71E9600C03676 /* UISegmentNavigationTest */ = {
 			isa = PBXGroup;
 			children = (
-				5987922818B749F100C03676 /* GuGuLandscapeTableView.h */,
-				5987922918B749F100C03676 /* GuGuLandscapeTableView.m */,
-				5987921C18B71ED600C03676 /* GuGuSegmentNaviViewController.h */,
-				5987921D18B71ED600C03676 /* GuGuSegmentNaviViewController.m */,
+				DABEA695198A1C5000B82A3C /* Classes */,
 				598791F618B71E9600C03676 /* AppDelegate.h */,
 				598791F718B71E9600C03676 /* AppDelegate.m */,
 				598791F918B71E9600C03676 /* Main.storyboard */,
@@ -132,8 +129,6 @@
 				598791FD18B71E9600C03676 /* ViewController.m */,
 				598791FF18B71E9600C03676 /* Images.xcassets */,
 				598791EE18B71E9600C03676 /* Supporting Files */,
-				5987921F18B721DF00C03676 /* GuGuSegmentBarView.h */,
-				5987922018B721DF00C03676 /* GuGuSegmentBarView.m */,
 			);
 			path = UISegmentNavigationTest;
 			sourceTree = "<group>";
@@ -165,6 +160,19 @@
 				5987920F18B71E9600C03676 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DABEA695198A1C5000B82A3C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DABEA696198A1C6700B82A3C /* ZPLandscapeTableView.h */,
+				DABEA697198A1C6700B82A3C /* ZPLandscapeTableView.m */,
+				DABEA698198A1C6700B82A3C /* ZPSegmentNaviViewController.h */,
+				DABEA699198A1C6700B82A3C /* ZPSegmentNaviViewController.m */,
+				DABEA69A198A1C6700B82A3C /* ZPSegmentBarView.h */,
+				DABEA69B198A1C6700B82A3C /* ZPSegmentBarView.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,11 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5987922A18B749F100C03676 /* GuGuLandscapeTableView.m in Sources */,
-				5987922118B721DF00C03676 /* GuGuSegmentBarView.m in Sources */,
+				DABEA69D198A1C6700B82A3C /* ZPSegmentNaviViewController.m in Sources */,
 				598791FE18B71E9600C03676 /* ViewController.m in Sources */,
+				DABEA69E198A1C6700B82A3C /* ZPSegmentBarView.m in Sources */,
+				DABEA69C198A1C6700B82A3C /* ZPLandscapeTableView.m in Sources */,
 				598791F818B71E9600C03676 /* AppDelegate.m in Sources */,
-				5987921E18B71ED600C03676 /* GuGuSegmentNaviViewController.m in Sources */,
 				598791F418B71E9600C03676 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +488,7 @@
 				5987921818B71E9600C03676 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5987921918B71E9600C03676 /* Build configuration list for PBXNativeTarget "UISegmentNavigationTestTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +497,7 @@
 				5987921B18B71E9600C03676 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

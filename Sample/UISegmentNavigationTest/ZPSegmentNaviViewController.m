@@ -6,23 +6,30 @@
 //  Copyright (c) 2014年 gugupluto. All rights reserved.
 //
 
-#import "GuGuSegmentNaviViewController.h"
-#import "GuGuSegmentBarView.h"
-#import "GuGuLandscapeTableView.h"
+#import "ZPSegmentNaviViewController.h"
+#import "ZPSegmentBarView.h"
+#import "ZPLandscapeTableView.h"
 
-#define kBarHeight 27
-@interface GuGuSegmentNaviViewController ()
+#define kBarHeight 40
+@interface ZPSegmentNaviViewController ()
 {
     int currentIndex;
     NSArray *_titleArray;
-    GuGuLandscapeTableView *contentTable;
-    GuGuSegmentBarView *barView ;
+    ZPLandscapeTableView *contentTable;
+    ZPSegmentBarView *barView ;
 }
 @end
 
-@implementation GuGuSegmentNaviViewController
+@implementation ZPSegmentNaviViewController
 
--(id)initWithItems:(NSArray*)titleArray andControllers:(NSArray*)controllers
+
+
+-(id)initWithItems:(NSArray*)titleArray
+    andControllers:(NSArray*)controllers
+   simpleTextColor:(UIColor*)simpleColor
+   selectTextColor:(UIColor*)selectColor
+         lineColor:(UIColor*)lineColor
+   backgroundColor:(UIColor*)backgroundColor
 {
     self = [super init];
     if (self)
@@ -37,26 +44,31 @@
             y = 64;
         }
         
-        barView = [[GuGuSegmentBarView alloc]initWithFrame:CGRectMake(0, y, 320, kBarHeight) andItems:titleArray];
+        barView = [[ZPSegmentBarView alloc]initWithFrame:CGRectMake(0, y, 320, kBarHeight) andItems:titleArray simpleTextColor:simpleColor selectTextColor:selectColor lineColor:lineColor];
+         barView.clickDelegate = self;
         
-        barView.backgroundColor = RGBCOLOR(230, 230, 230);
+
+        //设置背景颜色
+        barView.backgroundColor = backgroundColor;
+
+        
         [self.view addSubview:barView];
-        barView.clickDelegate = self;
+       
         self.view.backgroundColor = [UIColor whiteColor];
-        contentTable = [[GuGuLandscapeTableView alloc]initWithFrame:CGRectMake(0,  kBarHeight + y, 320, self.view.frame.size.height - kBarHeight - y) Array:controllers];
+        contentTable = [[ZPLandscapeTableView alloc]initWithFrame:CGRectMake(0,  kBarHeight + y, 320, self.view.frame.size.height - kBarHeight - y) Array:controllers];
         contentTable.swipeDelegate = self;
         
         [self.view addSubview:contentTable];
         
         
-        if (controllers.count > 0)
-        {
-            for (UIViewController *controller  in controllers)
-            {
-                //[self addChildViewController:controller];
-            }
-            currentIndex = 0;
-        }
+//        if (controllers.count > 0)
+//        {
+//            for (UIViewController *controller  in controllers)
+//            {
+//                //[self addChildViewController:controller];
+//            }
+//            currentIndex = 0;
+//        }
         _titleArray = titleArray;
     }
     return self;
@@ -100,14 +112,20 @@
 -(void)contentSelectedIndexChanged:(int)newIndex
 {
     [barView selectIndex:newIndex];
+
 }
+
+
+
 
 -(void)scrollOffsetChanged:(CGPoint)offset
 {
     int page = (int)offset.y / 320 ;
     float radio = (float)((int)offset.y % 320)/320;
     [barView setLineOffsetWithPage:page andRatio:radio];
+
 }
+
 
 
 

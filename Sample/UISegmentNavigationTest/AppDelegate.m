@@ -8,13 +8,12 @@
 //
 
 #import "AppDelegate.h"
-#import "GuGuSegmentNaviViewController.h"
+#import "ZPSegmentNaviViewController.h"
 #import "ViewController.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
     NSArray *titleArray = [NSArray arrayWithObjects:@"轻松一刻",@"头条",@"北京",@"房产",@"移动互联",@"财经",@"科技",@"游戏",@"历史",@"军事",@"大满贯", nil];
     
     NSMutableArray *controllerArray = [[NSMutableArray alloc]init];
@@ -26,10 +25,9 @@
         [controllerArray addObject:vc];
     }
     
-    GuGuSegmentNaviViewController *controller = [[ GuGuSegmentNaviViewController alloc]initWithItems:titleArray andControllers:controllerArray];
+    ZPSegmentNaviViewController *controller = [[ ZPSegmentNaviViewController alloc]initWithItems:titleArray andControllers:controllerArray simpleTextColor:[UIColor blackColor] selectTextColor:[UIColor redColor] lineColor:[UIColor redColor] backgroundColor:[UIColor clearColor]];
     
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:controller];
-    
     self.window.rootViewController = nav;
     return YES;
 }

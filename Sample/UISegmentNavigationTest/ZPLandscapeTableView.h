@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GuGuSegmentBarView.h"
+#import "ZPSegmentBarView.h"
 
 
-@interface GuGuLandscapeTableView : UIView<UITableViewDataSource,UITableViewDelegate>
+@interface ZPLandscapeTableView : UIView<UITableViewDataSource,UITableViewDelegate>
 {
     UITableView *tableView;
 }

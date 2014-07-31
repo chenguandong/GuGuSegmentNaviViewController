@@ -8,7 +8,7 @@
 //
 
 #import "ViewController.h"
-#import "GuGuSegmentBarView.h"
+#import "ZPSegmentBarView.h"
 
 @interface ViewController ()
 

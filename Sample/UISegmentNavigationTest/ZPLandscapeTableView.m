@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 gugupluto. All rights reserved.
 //
 
-#import "GuGuLandscapeTableView.h"
+#import "ZPLandscapeTableView.h"
 
-@implementation GuGuLandscapeTableView
+@implementation ZPLandscapeTableView
 @synthesize cellDataSource;
 @synthesize swipeDelegate;
 - (id)initWithFrame:(CGRect)frame Array:(NSArray*)array
@@ -28,8 +28,10 @@
         tableView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
         tableView.showsVerticalScrollIndicator = NO;
         tableView.pagingEnabled = YES;
+        
         tableView.backgroundColor = [UIColor colorWithRed:192/256.0 green:192/256.0 blue:192/256.0 alpha:1.0];
-        tableView.bounces =YES;
+        //是否有反弹效果
+        tableView.bounces =NO;
         [self addSubview:tableView];
          self.cellDataSource = array;
         
@@ -85,6 +87,7 @@
         [self.swipeDelegate contentSelectedIndexChanged:index];
     }
 }
+
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
